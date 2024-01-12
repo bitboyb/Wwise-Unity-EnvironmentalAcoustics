@@ -1,8 +1,16 @@
-/*********************************************************************
-Environmental Acoustics v0.2
-By Syed Assad Abbas Bokhari (2023)
+/**************************************************************************************************
 
-*********************************************************************/
+Environmental Acoustics version 0.2
+By Syed Assad Abbas Bokhari (2023)
+www.assadbokhari.com
+
+A simple Unity C# script which calculates the dimension of a space.
+Currently it alters two Wwise RTPC's which adjust the send reverb dynamically.
+
+This can be altered to use FMOD or another way to dynamically change the reverb settings.
+Adjust the framesPerUpdate to a higher number and rayCount to a lower number to improve performance.
+
+***************************************************************************************************/
 
 using UnityEngine;
 
