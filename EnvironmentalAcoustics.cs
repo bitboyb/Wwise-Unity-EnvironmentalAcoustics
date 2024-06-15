@@ -55,8 +55,7 @@ public class AcousticAnalyser : MonoBehaviour
         {
             _isMoving = _charController.velocity.magnitude > playerVelocityThreshold;
 
-            if (_isMoving)
-                CastAllRays();
+            if (_isMoving) CastAllRays();
 
             CalculateSpaceDimensions();
             roomSize = _averageHeight * _averageDistance;
@@ -70,7 +69,6 @@ public class AcousticAnalyser : MonoBehaviour
                 AkSoundEngine.SetRTPCValue("Inside_Room_Size", roomSize);
                 AkSoundEngine.SetRTPCValue("Outside_Room_Size", -1f);
             }
-            
             _frameCounter = 0;
         }
     }
@@ -91,7 +89,7 @@ public class AcousticAnalyser : MonoBehaviour
         RaycastHit hit;
         Vector3 direction = _rayDirections[index];
         
-        if(drawDebugLines) Debug.DrawRay(transform.position, direction * maxDistance, Color.red);
+        if (drawDebugLines) Debug.DrawRay(transform.position, direction * maxDistance, Color.red);
         
         Ray ray = new Ray(transform.position, direction);
 
