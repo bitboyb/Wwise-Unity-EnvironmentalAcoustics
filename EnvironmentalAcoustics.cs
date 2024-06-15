@@ -111,7 +111,7 @@ public class AcousticAnalyser : MonoBehaviour
         }
         else _ceilingHeights[index] = transform.position.y + maxHeight;
         
-        if(drawDebugLines) Debug.DrawRay(endPoint, ceilingDirection * maxDistance, Color.blue);
+        if (drawDebugLines) Debug.DrawRay(endPoint, ceilingDirection * maxDistance, Color.blue);
     }
 
     private Vector3[] CalculateRayDirections()
